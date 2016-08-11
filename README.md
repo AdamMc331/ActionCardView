@@ -6,7 +6,20 @@ This library is for a specialized CardView designed to highlight a specific acti
 Usage
 -----
 
-I am actively working to get this library in JCenter, hold tight.
+To have access to the library, add the dependency to your build.gradle:
+
+```java
+compile 'com.adammcneilly:actioncardview:1.0.0'
+```
+
+At this time the library is not yet available in JCenter, so you must include a reference to my maven repo:
+```java
+repositories {
+    maven {
+        url  "http://dl.bintray.com/androidessence/maven"
+    }
+}
+```
 
 Sample
 ------
