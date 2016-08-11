@@ -16,7 +16,7 @@ At this time the library is not yet available in JCenter, so you must include a 
 ```java
 repositories {
     maven {
-        url  "http://dl.bintray.com/androidessence/maven"
+        url  "http://dl.bintray.com/adammc331/maven"
     }
 }
 ```
