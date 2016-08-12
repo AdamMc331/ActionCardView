@@ -23,7 +23,7 @@ Below is a screenshot of what a sample ActionCardView may look like:
 ActionButton
 --------------
 
-At the button of the ActionCardView is a button bar the displays the action buttons. These buttons are right justified, but will be displayed left to right in the order that they are entered. In other words, the first button you create will be the left most button on the bar.
+At the bottom of the ActionCardView is a button bar the displays the action buttons. These buttons are right justified, but will be displayed left to right in the order that they are entered. In other words, the first button you create will be the left most button on the bar.
 
 There are two ways to implement the action button. First is via XML:
 
