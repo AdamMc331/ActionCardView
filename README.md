@@ -12,15 +12,6 @@ To have access to the library, add the dependency to your build.gradle:
 compile 'com.adammcneilly:actioncardview:1.0.0'
 ```
 
-At this time the library is not yet available in JCenter, so you must include a reference to my maven repo:
-```java
-repositories {
-    maven {
-        url  "http://dl.bintray.com/adammc331/maven"
-    }
-}
-```
-
 Sample
 ------
 
