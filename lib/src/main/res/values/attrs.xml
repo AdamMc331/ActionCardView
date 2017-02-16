@@ -5,6 +5,7 @@
         <attr name="cardTitleTextColor" format="color"/>
 
         <attr name="cardDividerColor" format="color"/>
+        <attr name="cardDividerHeight" format="dimension"/>
 
         <attr name="cardDescription" format="string"/>
         <attr name="cardDescriptionTextColor" format="color"/>

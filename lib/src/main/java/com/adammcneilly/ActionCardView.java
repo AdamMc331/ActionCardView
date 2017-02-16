@@ -100,6 +100,10 @@ public class ActionCardView extends CardView {
                 setDividerColor(typedArray.getColor(R.styleable.ActionCardView_cardDividerColor, defaultColor));
             }
 
+            if(typedArray.hasValue(R.styleable.ActionCardView_cardDividerHeight)) {
+                setDividerHeight(typedArray.getDimensionPixelSize(R.styleable.ActionCardView_cardDividerHeight, 1));
+            }
+
             if(typedArray.hasValue(R.styleable.ActionCardView_cardDescription)) {
                 setDescription(typedArray.getString(R.styleable.ActionCardView_cardDescription));
             }
@@ -151,6 +155,19 @@ public class ActionCardView extends CardView {
      */
     public void setDividerColor(int color) {
         this.divider.setBackgroundColor(color);
+    }
+
+    /**
+     * Sets the divider height.
+     * @param height The height (in pixels) to set the divider.
+     */
+    public void setDividerHeight(int height) {
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                height
+        );
+
+        this.divider.setLayoutParams(layoutParams);
     }
 
     /**
