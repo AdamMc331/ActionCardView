@@ -12,13 +12,14 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:cardTitle="Test Title"
-        app:cardDescription="Test Description">
+        app:cardDescription="Test Description"
+        app:cardDividerHeight="1px">
 
         <com.adammcneilly.ActionButton
             android:id="@+id/button_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="One"
+            android:text="@string/one"
             android:textColor="@color/colorAccent"/>
 
     </com.adammcneilly.ActionCardView>

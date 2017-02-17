@@ -87,6 +87,7 @@ public class ActionCardView extends CardView {
 
         if(typedArray != null) {
             int defaultColor = ContextCompat.getColor(context, android.R.color.black);
+            int defaultBackground = ContextCompat.getColor(context, android.R.color.white);
 
             if(typedArray.hasValue(R.styleable.ActionCardView_cardTitle)) {
                 setTitle(typedArray.getString(R.styleable.ActionCardView_cardTitle));
@@ -96,8 +97,16 @@ public class ActionCardView extends CardView {
                 setTitleTextColor(typedArray.getColor(R.styleable.ActionCardView_cardTitleTextColor, defaultColor));
             }
 
+            if(typedArray.hasValue(R.styleable.ActionCardView_cardTitleBackgroundColor)) {
+                setTitleBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_cardTitleBackgroundColor, defaultBackground));
+            }
+
             if(typedArray.hasValue(R.styleable.ActionCardView_cardDividerColor)) {
                 setDividerColor(typedArray.getColor(R.styleable.ActionCardView_cardDividerColor, defaultColor));
+            }
+
+            if(typedArray.hasValue(R.styleable.ActionCardView_cardDividerHeight)) {
+                setDividerHeight(typedArray.getDimensionPixelSize(R.styleable.ActionCardView_cardDividerHeight, 1));
             }
 
             if(typedArray.hasValue(R.styleable.ActionCardView_cardDescription)) {
@@ -106,6 +115,14 @@ public class ActionCardView extends CardView {
 
             if(typedArray.hasValue(R.styleable.ActionCardView_cardDescriptionTextColor)) {
                 setDescriptionTextColor(typedArray.getColor(R.styleable.ActionCardView_cardDescriptionTextColor, defaultColor));
+            }
+
+            if(typedArray.hasValue(R.styleable.ActionCardView_cardDescriptionBackgroundColor)) {
+                setDescriptionBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_cardDescriptionBackgroundColor, defaultBackground));
+            }
+
+            if(typedArray.hasValue(R.styleable.ActionCardView_buttonBarBackgroundColor)) {
+                setButtonBarBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_buttonBarBackgroundColor, defaultBackground));
             }
 
             typedArray.recycle();
@@ -147,10 +164,30 @@ public class ActionCardView extends CardView {
     }
 
     /**
+     * Sets the background color of the title.
+     */
+    public void setTitleBackgroundColor(int color) {
+        this.title.setBackgroundColor(color);
+    }
+
+    /**
      * Sets the divider color of the card.
      */
     public void setDividerColor(int color) {
         this.divider.setBackgroundColor(color);
+    }
+
+    /**
+     * Sets the divider height.
+     * @param height The height (in pixels) to set the divider.
+     */
+    public void setDividerHeight(int height) {
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LayoutParams.MATCH_PARENT,
+                height
+        );
+
+        this.divider.setLayoutParams(layoutParams);
     }
 
     /**
@@ -165,6 +202,20 @@ public class ActionCardView extends CardView {
      */
     public void setDescriptionTextColor(int color) {
         this.description.setTextColor(color);
+    }
+
+    /**
+     * Sets the background color of the description.
+     */
+    public void setDescriptionBackgroundColor(int color) {
+        this.description.setBackgroundColor(color);
+    }
+
+    /**
+     * Sets the background color of the button bar.
+     */
+    public void setButtonBarBackgroundColor(int color) {
+        this.buttonBar.setBackgroundColor(color);
     }
     //endregion
 
@@ -181,6 +232,34 @@ public class ActionCardView extends CardView {
      */
     public CharSequence getDescription() {
         return description.getText();
+    }
+
+    /**
+     * Retrieves the title text view.
+     */
+    public TextView getTitleTextView() {
+        return title;
+    }
+
+    /**
+     * Retrieves the description text view.
+     */
+    public TextView getDescriptionTextView() {
+        return description;
+    }
+
+    /**
+     * Retrieves the divider view.
+     */
+    public View getDivider() {
+        return divider;
+    }
+
+    /**
+     * Retrieves the button bar layout.
+     */
+    public LinearLayout getButtonBarLayout() {
+        return buttonBar;
     }
     //endregion
 
