@@ -12,6 +12,6 @@
         <attr name="cardDescriptionTextColor" format="color"/>
         <attr name="cardDescriptionBackgroundColor" format="color"/>
 
-        <attr name="buttonBarBackgroundColor" format="color"/>
+        <attr name="cardButtonBarBackgroundColor" format="color"/>
     </declare-styleable>
 </resources>

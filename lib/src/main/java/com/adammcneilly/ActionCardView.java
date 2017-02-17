@@ -121,8 +121,8 @@ public class ActionCardView extends CardView {
                 setDescriptionBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_cardDescriptionBackgroundColor, defaultBackground));
             }
 
-            if(typedArray.hasValue(R.styleable.ActionCardView_buttonBarBackgroundColor)) {
-                setButtonBarBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_buttonBarBackgroundColor, defaultBackground));
+            if(typedArray.hasValue(R.styleable.ActionCardView_cardButtonBarBackgroundColor)) {
+                setButtonBarBackgroundColor(typedArray.getColor(R.styleable.ActionCardView_cardButtonBarBackgroundColor, defaultBackground));
             }
 
             typedArray.recycle();
