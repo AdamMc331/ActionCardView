@@ -11,7 +11,7 @@ Usage
 To have access to the library, add the dependency to your build.gradle:
 
 ```java
-compile 'com.adammcneilly:actioncardview:1.0.0'
+compile 'com.adammcneilly:actioncardview:1.0.1'
 ```
 
 Sample
@@ -101,9 +101,12 @@ Note above that there are custom attributes for the card title and description. 
 
  * cardTitle
  * cardTitleTextColor
+ * cardTitleBackgroundColor
  * cardDividerColor
+ * cardDividerHeight
  * cardDescription
- * CardDescriptionTextColor
+ * cardDescriptionTextColor
+ * cardDescriptionBackgroundColor
 
 Credits & Contact
 -----------------
