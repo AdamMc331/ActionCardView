@@ -3,11 +3,15 @@
     <declare-styleable name="ActionCardView">
         <attr name="cardTitle" format="string" />
         <attr name="cardTitleTextColor" format="color"/>
+        <attr name="cardTitleBackgroundColor" format="color"/>
 
         <attr name="cardDividerColor" format="color"/>
         <attr name="cardDividerHeight" format="dimension"/>
 
         <attr name="cardDescription" format="string"/>
         <attr name="cardDescriptionTextColor" format="color"/>
+        <attr name="cardDescriptionBackgroundColor" format="color"/>
+
+        <attr name="buttonBarBackgroundColor" format="color"/>
     </declare-styleable>
 </resources>
